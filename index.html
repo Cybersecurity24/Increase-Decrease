@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .small {
+            font-size: 14px; 
+            font-family: Arial, sans-serif; 
+        }
+
+        .large {
+            font-size: 24px; 
+            font-family: "Times New Roman", serif; 
+        }
+
+        
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-right: 10px; 
+        }
+
+    
+        .red-button {
+            background-color: red; 
+            color: white; 
+            border: none; 
+        }
+    </style>
+</head>
+<body>
+
+   <p id="HelloChange" class="small">Hello Class</p>
+   <button onclick="increaseFontSize()">Increase Font Size</button>
+   <button class="red-button" onclick="decreaseFontSize()">Decrease Font Size</button>
+
+   
+   <p id="SecondText" class="small">Faran</p>
+
+   <script>
+       function increaseFontSize() {
+           var textElement = document.getElementById("HelloChange");
+           textElement.classList.remove("small");
+           textElement.classList.add("large");
+       }
+
+       function decreaseFontSize() {
+           var textElement = document.getElementById("HelloChange");
+           textElement.classList.remove("large");
+           textElement.classList.add("small");
+       }
+   </script>
+
+</body>
+</html>
